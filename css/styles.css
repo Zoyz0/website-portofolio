@@ -90,41 +90,42 @@
  * ------------------------------------------------------------------- */
 :root {
   /* Primary Colors */
-  --color-1: hsla(340, 80%, 60%, 1); /* Sophisticated Raspberry Pink */
-  --color-2: hsla(210, 70%, 45%, 1); /* Professional Teal Blue */
+  --color-1: hsla(340, 60%, 55%, 1); /* Muted Rose Pink */
+  --color-2: hsla(270, 45%, 45%, 1); /* Deep Mauve */
 
-  /* Variations */
-  --color-1-lighter: hsla(340, 80%, 80%, 1);
-  --color-1-light: hsla(340, 80%, 70%, 1);
-  --color-1-dark: hsla(340, 80%, 50%, 1);
-  --color-1-darker: hsla(340, 80%, 40%, 1);
+  /* Theme Color Variations */
+  --color-1-lighter: hsla(340, 60%, 85%, 1); /* Soft Blush */
+  --color-1-light: hsla(340, 60%, 70%, 1);
+  --color-1-dark: hsla(340, 60%, 45%, 1);
+  --color-1-darker: hsla(340, 60%, 35%, 1);
 
-  --color-2-lighter: hsla(210, 70%, 65%, 1);
-  --color-2-light: hsla(210, 70%, 55%, 1);
-  --color-2-dark: hsla(210, 70%, 35%, 1);
-  --color-2-darker: hsla(210, 70%, 25%, 1);
+  --color-2-lighter: hsla(270, 45%, 65%, 1); /* Soft Lilac */
+  --color-2-light: hsla(270, 45%, 55%, 1);
+  --color-2-dark: hsla(270, 45%, 35%, 1);
+  --color-2-darker: hsla(270, 45%, 25%, 1);
 
   /* Accent Colors */
-  --color-accent-1: hsla(45, 90%, 55%, 1); /* Warm Golden Yellow */
-  --color-accent-2: hsla(275, 60%, 50%, 1); /* Elegant Deep Plum */
+  --color-accent-1: hsla(35, 80%, 55%, 1); /* Warm Gold */
+  --color-accent-2: hsla(190, 50%, 40%, 1); /* Soft Teal */
 
   /* Feedback Colors */
   --color-error: hsla(0, 70%, 60%, 1);
-  --color-success: hsla(120, 60%, 50%, 1);
-  --color-info: hsla(205, 70%, 60%, 1);
-  --color-notice: hsla(45, 90%, 55%, 1);
+  --color-success: hsla(140, 50%, 50%, 1);
+  --color-info: hsla(220, 60%, 60%, 1);
+  --color-notice: hsla(45, 80%, 60%, 1);
 
   /* Neutral Shades */
   --color-black: #181818;
-  --color-gray-dark: #3a3a3a;
-  --color-gray: #6a6a6a;
-  --color-gray-light: #cfcfcf;
+  --color-gray-dark: #333333;
+  --color-gray: #666666;
+  --color-gray-light: #dadada;
   --color-white: #ffffff;
+  --color-offwhite: #f9f6f4; /* Warm White */
 
   /* Text Colors */
   --color-text: var(--color-gray-dark);
   --color-text-light: var(--color-gray);
-  --color-text-dark: var(--color-white);
+  --color-text-dark: var(--color-black);
 
   /* Buttons */
   --color-btn: var(--color-1-dark);
@@ -137,93 +138,11 @@
   --color-btn-primary-hover-text: var(--color-white);
 
   /* Background & Borders */
-  --color-body: var(--color-gray-light);
+  --color-body: var(--color-offwhite);
   --color-border: rgba(0, 0, 0, 0.1);
-  --border-radius: 5px;
+  --border-radius: 6px;
 }
 
-/* ------------------------------------------------------------------- 
- * ## spacing and typescale
- * ------------------------------------------------------------------- */
-:root {
-  /* spacing
-     * base font size: 19px 
-     * vertical space unit : 32px
-     */
-  --base-size: 62.5%;
-  --multiplier: 1;
-  --base-font-size: calc(1.9rem * var(--multiplier));
-  --space: calc(3.2rem * var(--multiplier));
-
-  /* vertical spacing 
-     */
-  --vspace-0_125: calc(0.125 * var(--space));
-  --vspace-0_25: calc(0.25 * var(--space));
-  --vspace-0_375: calc(0.375 * var(--space));
-  --vspace-0_5: calc(0.5 * var(--space));
-  --vspace-0_625: calc(0.625 * var(--space));
-  --vspace-0_75: calc(0.75 * var(--space));
-  --vspace-0_875: calc(0.875 * var(--space));
-  --vspace-1: calc(var(--space));
-  --vspace-1_25: calc(1.25 * var(--space));
-  --vspace-1_5: calc(1.5 * var(--space));
-  --vspace-1_75: calc(1.75 * var(--space));
-  --vspace-2: calc(2 * var(--space));
-  --vspace-2_5: calc(2.5 * var(--space));
-  --vspace-3: calc(3 * var(--space));
-  --vspace-3_5: calc(3.5 * var(--space));
-  --vspace-4: calc(4 * var(--space));
-  --vspace-4_5: calc(4.5 * var(--space));
-  --vspace-5: calc(5 * var(--space));
-
-  /* type scale
-     * ratio 1:2 | base: 19px
-     * -------------------------------------------------------
-     *
-     * --text-display-3 = (81.70px)
-     * --text-display-2 = (68.08px)
-     * --text-display-1 = (56.73px)
-     * --text-xxxl      = (47.28px)
-     * --text-xxl       = (39.40px)
-     * --text-xl        = (32.83px)
-     * --text-lg        = (27.36px)
-     * --text-md        = (22.80px)
-     * --text-size      = (19.00px) BASE
-     * --text-sm        = (15.83px)
-     * --text-xs        = (13.19px)
-     *
-     * ---------------------------------------------------------
-     */
-  --text-scale-ratio: 1.2;
-  --text-size: var(--base-font-size);
-  --text-xs: calc(
-    (var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio)
-  );
-  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
-  --text-md: calc(
-    var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio)
-  );
-  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
-  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
-  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
-  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
-  --text-display-1: calc(var(--text-xxxl) * var(--text-scale-ratio));
-  --text-display-2: calc(var(--text-display-1) * var(--text-scale-ratio));
-  --text-display-3: calc(var(--text-display-2) * var(--text-scale-ratio));
-
-  /* default button height
-     */
-  --vspace-btn: var(--vspace-2);
-}
-
-/* on mobile devices below 600px, change the value of '--multiplier' 
- * to adjust the values of base font size and vertical space unit.
- */
-@media screen and (max-width: 600px) {
-  :root {
-    --multiplier: 0.875;
-  }
-}
 
 /* ------------------------------------------------------------------- 
  * ## grid variables
