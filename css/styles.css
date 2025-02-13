@@ -89,96 +89,57 @@
  * ## colors
  * ------------------------------------------------------------------- */
 :root {
-  /* color-1(#eabe7c)
-     * color-2(#23967f)
-     */
-  --color-1: hsla(36, 72%, 70%, 1);
-  --color-2: hsla(168, 62%, 36%, 1);
+  /* Primary Colors */
+  --color-1: hsla(340, 80%, 60%, 1); /* Sophisticated Raspberry Pink */
+  --color-2: hsla(210, 70%, 45%, 1); /* Professional Teal Blue */
 
-  /* theme color variations
-     */
-  --color-1-lighter: hsla(36, 72%, 90%, 1);
-  --color-1-light: hsla(36, 72%, 80%, 1);
-  --color-1-dark: hsla(36, 72%, 60%, 1);
-  --color-1-darker: hsla(36, 72%, 50%, 1);
-  --color-2-lighter: hsla(168, 62%, 56%, 1);
-  --color-2-light: hsla(168, 62%, 46%, 1);
-  --color-2-dark: hsla(168, 62%, 26%, 1);
-  --color-2-darker: hsla(168, 62%, 16%, 1);
+  /* Variations */
+  --color-1-lighter: hsla(340, 80%, 80%, 1);
+  --color-1-light: hsla(340, 80%, 70%, 1);
+  --color-1-dark: hsla(340, 80%, 50%, 1);
+  --color-1-darker: hsla(340, 80%, 40%, 1);
 
-  /* feedback colors
-     * color-error(#ffd1d2), color-success(#c8e675), 
-     * color-info(#d7ecfb), color-notice(#fff099)
-     */
-  --color-error: hsla(359, 100%, 91%, 1);
-  --color-success: hsla(76, 69%, 68%, 1);
-  --color-info: hsla(205, 82%, 91%, 1);
-  --color-notice: hsla(51, 100%, 80%, 1);
-  --color-error-content: hsla(359, 50%, 50%, 1);
-  --color-success-content: hsla(76, 29%, 28%, 1);
-  --color-info-content: hsla(205, 32%, 31%, 1);
-  --color-notice-content: hsla(51, 30%, 30%, 1);
+  --color-2-lighter: hsla(210, 70%, 65%, 1);
+  --color-2-light: hsla(210, 70%, 55%, 1);
+  --color-2-dark: hsla(210, 70%, 35%, 1);
+  --color-2-darker: hsla(210, 70%, 25%, 1);
 
-  /* shades 
-     * generated using 
-     * Tint & Shade Generator 
-     * (https://maketintsandshades.com/)
-     */
-  --color-black: #000000;
-  --color-gray-19: #020202;
-  --color-gray-18: #040404;
-  --color-gray-17: #060607;
-  --color-gray-16: #080809;
-  --color-gray-15: #0a0b0b;
-  --color-gray-14: #0c0d0d;
-  --color-gray-13: #0e0f0f;
-  --color-gray-12: #101112;
-  --color-gray-11: #121314;
-  --color-gray-10: #141516;
-  --color-gray-9: #2c2c2d;
-  --color-gray-8: #434445;
-  --color-gray-7: #5b5b5c;
-  --color-gray-6: #727373;
-  --color-gray-5: #8a8a8b;
-  --color-gray-4: #a1a1a2;
-  --color-gray-3: #b9b9b9;
-  --color-gray-2: #d0d0d0;
-  --color-gray-1: #e8e8e8;
+  /* Accent Colors */
+  --color-accent-1: hsla(45, 90%, 55%, 1); /* Warm Golden Yellow */
+  --color-accent-2: hsla(275, 60%, 50%, 1); /* Elegant Deep Plum */
+
+  /* Feedback Colors */
+  --color-error: hsla(0, 70%, 60%, 1);
+  --color-success: hsla(120, 60%, 50%, 1);
+  --color-info: hsla(205, 70%, 60%, 1);
+  --color-notice: hsla(45, 90%, 55%, 1);
+
+  /* Neutral Shades */
+  --color-black: #181818;
+  --color-gray-dark: #3a3a3a;
+  --color-gray: #6a6a6a;
+  --color-gray-light: #cfcfcf;
   --color-white: #ffffff;
 
-  /* text
-     */
-  --color-text: var(--color-gray-4);
+  /* Text Colors */
+  --color-text: var(--color-gray-dark);
+  --color-text-light: var(--color-gray);
   --color-text-dark: var(--color-white);
-  --color-text-light: var(--color-gray-7);
-  --color-placeholder: var(--color-gray-7);
 
-  /* buttons
-     */
-  --color-btn: var(--color-gray-9);
-  --color-btn-text: var(--color-1);
-  --color-btn-hover: var(--color-white);
-  --color-btn-hover-text: var(--color-black);
-  --color-btn-primary: var(--color-1-dark);
-  --color-btn-primary-text: var(--color-black);
-  --color-btn-primary-hover: var(--color-1-darker);
-  --color-btn-primary-hover-text: var(--color-black);
-  --color-btn-stroke: var(--color-white);
-  --color-btn-stroke-text: var(--color-white);
-  --color-btn-stroke-hover: var(--color-white);
-  --color-btn-stroke-hover-text: var(--color-black);
+  /* Buttons */
+  --color-btn: var(--color-1-dark);
+  --color-btn-text: var(--color-white);
+  --color-btn-hover: var(--color-1-darker);
+  --color-btn-hover-text: var(--color-white);
+  --color-btn-primary: var(--color-2-dark);
+  --color-btn-primary-text: var(--color-white);
+  --color-btn-primary-hover: var(--color-2-darker);
+  --color-btn-primary-hover-text: var(--color-white);
 
-  /* preloader
-     */
-  --color-preloader-bg: var(--color-gray-10);
-  --color-loader: white;
-  --color-loader-light: rgba(255, 255, 255, 0.1);
-
-  /* others
-     */
-  --color-body: var(--color-gray-10);
-  --color-border: rgba(255, 255, 255, 0.05);
-  --border-radius: 3px;
+  /* Background & Borders */
+  --color-body: var(--color-gray-light);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --border-radius: 5px;
 }
 
 /* ------------------------------------------------------------------- 
